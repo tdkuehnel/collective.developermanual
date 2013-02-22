@@ -36,6 +36,26 @@ Wait.. didn't you say "adapt" ? Yes, we're adapting hard-coded to a library it l
 
 Difference between a CA approach and low-level programming
 ==========================================================
+So we are used to hard-code things together, write our application code and pull the things
+we need from external libraries - thats how it used to be for us. But let's have a closer
+look to what happens when we run a Zope Application Server, driven by a Python interpreter
+with a Plone Website running on it,
+and developing a product to be used by this system. The important thing here is the meaning
+of programming for a system while it is running. Yes, you're reading right. The system
+is up and running, and we are developing a piece of code which will be inserted at runtime
+into the fully working system - that is all the way up the ladder of programming 
+language development you might think. And you are right.
+
+So what is necessary to achieve such an unimagible, for you controverse thing at all? Hard
+coded API dependencies, header files with variables and function definitions, all completely
+useless. What at runtime will be inserted into the system is unknown to the system. It may 
+yet not be programmed at all. So there must be some kind of mechanism how the system can 
+discover of what a piece of code wants to be integrated, and the piece of code that wants 
+to be "driven" by the system has to know how to behave well...
+
+And yes, you are again right, there is such a mechanism thats working inside the whole Python
+Zope Plone stack doing exactly that. Registering Adapters where Interface can "connect" to.
+
 
 
 
