@@ -1,11 +1,43 @@
 ==========
-Interfaces
+Adapters and Interfaces for Dummies
 ==========
 
 .. contents:: :local:
 
 Introduction
 =============
+
+When it comes to extending and programming for a Plone website, your way may end up 
+in the "unknown lands" of Zope Component Architecture, full of interfaces, adapters 
+and many other, maybe highly useful, but to you in the beginning, probably unkwon things.
+
+This document is here to guide you.
+
+Programmers without CA (Component Architecture) knowledge 
+=========================================================
+
+Coming from the low-level languages, many programmers are comfortable with their
+source code and header files. Declaring functions and variables, defining an using them
+is well known. If you want to share a function you compile a library which exposes its
+functionality through its API. To use one of its library functions from another program,
+one usually includes the header file which tells the programm how to call and use that 
+function. But wait .. didn't we say API? Wasn't that an Interface, a programming one?
+
+Yes, thats true, a function library provides an API so that it is usual at all - without 
+knowing about and how to use functions, it would be completely useless. So when you use
+a function library in a low-level language, you talk to its interface in your code, pass
+argument and (maybe) receive the desired results. But you make the connection from your 
+source code to the library permanent at compile and link time - its melted together like
+one piece. Say you want to use another library, which provides similar functionality, but
+has a different API, you end up rewriting all your code to adapt to the different 
+interface...
+
+Wait.. didn't you say "adapt" ? Yes, we're adapting hard-coded to a library it looks like.
+
+Difference between a CA approach and low-level programming
+==========================================================
+
+
 
 Interfaces define what methods an object provides.
 Plone extensively uses interfaces to define APIs between
